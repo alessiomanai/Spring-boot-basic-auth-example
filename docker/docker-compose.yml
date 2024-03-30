@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  app:
+    build: test
+    container_name: test
+    image: test
+    restart: on-failure
+    ports:
+      - 8080:8080
+    expose:
+      - "8080"
+    volumes:
+      - app_volume:/app
+
+volumes:
+  dbdata:
+  app_volume:
+
